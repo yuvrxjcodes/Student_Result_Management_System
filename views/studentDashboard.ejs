@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <header class="dashboard-header">
+        <h1>🎓 Student Dashboard</h1>
+        <a href="/logout" class="logout-btn">Logout</a>
+      </header>
+
+      <div class="dashboard-content">
+        <section class="card">
+          <h2>Your Details</h2>
+          <p><strong>Name:</strong> <%= student.name %></p>
+          <p><strong>Roll No:</strong> <%= student.roll_no %></p>
+          <p><strong>Class:</strong> <%= student.class_name %></p>
+        </section>
+
+        <section class="card">
+          <h2>Your Marks</h2>
+          <% if (marks.length > 0) { %>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Marks</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% marks.forEach(m => { %>
+              <tr>
+                <td><%= m.subject %></td>
+                <td><%= m.score %></td>
+              </tr>
+              <% }) %>
+            </tbody>
+          </table>
+          <% } else { %>
+          <p>No marks available yet.</p>
+          <% } %>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

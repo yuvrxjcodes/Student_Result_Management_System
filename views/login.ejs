@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Student Management</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-card">
+        <h1>Welcome Back 👋</h1>
+        <p class="subtitle">Login to your account</p>
+
+        <form action="/login" method="POST" class="login-form">
+          <input
+            type="text"
+            name="username"
+            placeholder="Enter your email or username"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+          <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        <div class="register-link">
+          <p>New user?</p>
+          <a href="/register" class="btn-register">Register</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
